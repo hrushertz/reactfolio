@@ -69,36 +69,29 @@
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 500px) {
 	.notfound-message {
-		position: absolute; /* Change to absolute for better placement */
-		top: auto; /* Remove fixed positioning */
-		left: auto; /* Remove fixed positioning */
+		position: absolute;
+		top: auto;
+		left: auto;
 		width: 100%;
-		transform: translate(0, 0); /* Reset transform for mobile */
-		padding: 20px; /* Add padding for better spacing */
+		transform: none;
 	}
 
 	.notfound-title {
-		font-size: 50px; /* Adjusted font size for smaller screens */
+		font-size: 50px;
 	}
 
 	.not-found-message {
-		width: 90%; /* Use more width for message */
-		font-size: 15px; /* Adjusted font size for readability */
+		width: 100%;
+		font-size: 15px;
 		margin-top: 10px;
-		margin-left: 0; /* Reset margin for better alignment */
-		margin-right: 0; /* Reset margin for better alignment */
-		text-align: center; /* Centered text for better layout */
+		margin-left: -5px;
+		margin-right: 32px;
 	}
 
 	.not-found-link {
-		font-size: 15px; /* Smaller font size for the link */
-		padding: 10px 20px; /* Adjusted padding for the link */
-	}
-
-	.notfound-logo {
-		top: 2vh; /* Adjust logo position for mobile */
+		font-size: 15px;
+		padding: 15px 15px;
 	}
 }

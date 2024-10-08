@@ -1,14 +1,6 @@
 .logo {
-    border-radius: 50%; /* Maintain circular shape */
-    display: block; /* Centers the logo in its container */
-    margin: 0 auto; /* Centers the logo horizontally */
-    padding: 0;
-    max-width: 100%; /* Ensure logo scales down on smaller screens */
-    height: auto; /* Maintains the aspect ratio */
-}
-
-@media (max-width: 600px) {
-    .logo {
-        width: 80%; /* Set a relative width for mobile devices */
-    }
+	border-radius: 50%;
+	display: block;
+	margin: 0;
+	padding: 0;
 }

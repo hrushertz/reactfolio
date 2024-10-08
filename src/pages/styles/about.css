@@ -23,29 +23,28 @@
 
 .about-main {
 	display: flex;
-	flex-direction: row; /* Ensures that items are in a row on larger screens */
 }
 
 .about-right-side {
-	flex-basis: 900px; /* Adjust this for larger screens */
+	flex-basis: 900px;
 }
 
 .about-title {
-	width: 100% !important; /* Full width for titles */
+	width: 100% !important;
 }
 
 .about-subtitle {
-	width: 80% !important; /* Adjust as necessary */
+	width: 80% !important;
 }
 
 .about-left-side {
 	display: flex;
 	flex-direction: column;
-	flex-basis: 300px; /* Adjust this for larger screens */
+	flex-basis: 300px;
 }
 
 .about-image-container {
-	width: 370px; /* Adjust this for larger screens */
+	width: 370px;
 }
 
 .about-image-wrapper {
@@ -58,7 +57,7 @@
 
 .about-image-wrapper img {
 	display: block;
-	width: 100%; /* Ensure the image scales appropriately */
+	width: 100%;
 }
 
 .about-socials {
@@ -67,53 +66,52 @@
 }
 
 .about-socials-mobile {
-	display: none; /* Hidden by default */
+	display: none;
 }
 
 @media (max-width: 1024px) {
 	.about-logo {
-		z-index: 100; /* Keep logo visible above content */
+		z-index: 100;
 	}
 
 	.about-main {
-		flex-direction: column; /* Stack items vertically on medium screens */
+		flex-direction: column;
 	}
 
 	.about-subtitle {
-		padding-top: 20px !important; /* Adjust subtitle spacing */
+		padding-top: 20px !important;
 	}
 
 	.about-left-side {
-		flex-basis: 100%; /* Full width on smaller screens */
-		order: 1; /* Order for stacking */
+		flex-basis: 100%;
+		order: 1;
 	}
 
 	.about-right-side {
-		flex-basis: 100%; /* Full width on smaller screens */
-		order: 2; /* Order for stacking */
+		flex-basis: 100%;
+		order: 2;
 	}
 
 	.about-image-container {
-		padding-bottom: 40px; /* Spacing for images on smaller screens */
-		width: 80%; /* Make image container responsive */
+		padding-bottom: 40px;
 	}
 
 	.about-socials {
-		display: none; /* Hide the desktop socials */
+		display: none;
 	}
 
 	.about-socials-mobile {
-		padding-top: 30px; /* Spacing for mobile socials */
-		display: flex; /* Show mobile socials */
+		padding-top: 30px;
+		display: flex;
 	}
 }
 
 @media (max-width: 600px) {
 	.about-container {
-		padding-top: 60px; /* Adjust top padding for mobile */
+		padding-top: 60px;
 	}
 
 	.about-image-container {
-		width: 90%; /* Slightly increase width on mobile */
+		width: 80%;
 	}
 }

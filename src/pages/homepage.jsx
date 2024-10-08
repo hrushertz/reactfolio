@@ -178,6 +178,7 @@ const Homepage = () => {
 										key={(index + 1).toString()}
 									>
 										<Article
+											key={(index + 1).toString()}
 											date={article().date}
 											title={article().title}
 											description={article().description}

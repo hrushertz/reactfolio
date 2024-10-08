@@ -5,19 +5,16 @@
 	mix-blend-mode: normal;
 	border-radius: 20px;
 	opacity: 0.8;
-	background: #fff; /* Added background for better visibility */
-	margin: 10px auto; /* Center the article and add spacing */
-	transition: box-shadow 0.3s ease; /* Add transition for hover effect */
 }
 
 .homepage-article:hover {
 	background: #fafafa;
 	opacity: 1;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+	transition: background-color 0.3s ease-in-out;
 }
 
 .homepage-article-content {
-	padding: 20px; /* Adjust padding for better spacing */
+	padding: 30px;
 }
 
 .homepage-article-date {
@@ -30,22 +27,21 @@
 .homepage-article-title {
 	opacity: 1;
 	color: var(--primary-color);
-	font-size: 18px; /* Increase title font size for better visibility */
-	margin-bottom: 0.5em; /* Adjust bottom margin for better spacing */
+	font-size: 16px;
+	margin-bottom: 1em;
 	font-weight: 700;
 }
 
 .homepage-article-description {
 	opacity: 1;
 	color: var(--secondary-color);
-	font-size: 14px; /* Increase description font size for better readability */
-	line-height: 1.5; /* Improve line height for readability */
-	margin-bottom: 1em; /* Add bottom margin for spacing */
+	font-size: 12px;
+	line-height: 1.5;
 }
 
 .homepage-article-link {
 	opacity: 1;
-	padding-top: 10px; /* Reduce padding for better layout */
+	padding-top: 20px;
 	font-size: 15px;
 	font-weight: 700;
 }
@@ -55,22 +51,8 @@
 	text-decoration: none;
 }
 
-.homepage-article-link a:hover {
-	text-decoration: underline; /* Add underline on hover for clarity */
-}
-
-/* Responsive Styles */
 @media (max-width: 600px) {
 	.homepage-article {
-		width: 100%; /* Full width on mobile */
-		padding: 15px; /* Reduce padding for smaller screens */
-	}
-
-	.homepage-article-title {
-		font-size: 16px; /* Slightly reduce font size for mobile */
-	}
-
-	.homepage-article-description {
-		font-size: 12px; /* Maintain smaller font size for mobile */
+		width: 100%;
 	}
 }

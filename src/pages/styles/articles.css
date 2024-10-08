@@ -1,72 +1,52 @@
 .articles-logo-container {
-    display: flex;
-    justify-content: left;
-    padding-top: 25px;
+	display: flex;
+	justify-content: left;
+	padding-top: 25px;
 }
 
 .articles-logo {
-    display: flex;
-    position: fixed;
-    border: 1px solid white;
-    border-radius: 50%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    top: 4vh;
+	display: flex;
+	position: fixed;
+	border: 1px solid white;
+	border-radius: 50%;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	top: 4vh;
 }
 
 .articles-main-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: 0;
-    padding-top: 120px; /* Adjust padding for mobile */
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	padding-top: 120px;
 }
 
 .articles-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items on small screens */
+	display: flex;
+	flex-direction: column;
 }
 
 .articles-wrapper {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Make sure it takes full width */
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
 }
 
 .articles-article {
-    padding: 0 35px 20px 35px; /* Adjust padding for mobile */
-    border-left: 2px solid #f4f4f5;
-    width: 100%;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+	padding-top: 0px;
+	padding-left: 35px;
+	padding-bottom: 20px;
+	border-left: 2px solid #f4f4f5;
+	width: 100%;
 }
 
 @media (max-width: 1024px) {
-    .articles-title,
-    .articles-subtitle {
-        width: 100% !important; /* Ensure full width on smaller screens */
-        text-align: center; /* Center text for better appearance */
-    }
+	.articles-title {
+		width: 100% !important;
+	}
 
-    .articles-article {
-        padding-left: 20px; /* Reduce padding on smaller screens */
-        padding-right: 20px; /* Reduce padding on smaller screens */
-    }
-}
-
-@media (max-width: 600px) {
-    .articles-main-container {
-        padding-top: 60px; /* Adjust padding for mobile view */
-    }
-
-    .articles-wrapper {
-        padding-top: 30px; /* Less padding for mobile */
-    }
-
-    .articles-article {
-        padding-left: 10px; /* Further reduce padding */
-        padding-right: 10px; /* Further reduce padding */
-        border-left: none; /* Optional: Remove left border on mobile */
-    }
+	.articles-subtitle {
+		width: 100% !important;
+	}
 }

@@ -4,97 +4,69 @@
 	mix-blend-mode: normal;
 	border-radius: 20px;
 	opacity: 0.8;
-	height: 100%; /* Use 100% height for better flexibility */
-	width: 90%; /* Set width for better mobile alignment */
-	margin: 10px auto; /* Center the project card */
-	transition: background-color 0.3s ease-in-out; /* Transition for hover effect */
+	height: 100%;
 }
 
 .project a {
-	text-decoration: none; /* Remove underline for links */
+	text-decoration: none;
 }
 
 .project:hover {
-	background: #fafafa; /* Background on hover */
-	opacity: 1; /* Fully opaque on hover */
+	background: #fafafa;
+	opacity: 1;
+	transition: background-color 0.3s ease-in-out;
 }
 
 .project:hover .project-link {
-	color: var(--link-color); /* Change link color on hover */
-	transition: color 0.3s ease-in-out; /* Smooth transition */
+	color: var(--link-color);
+	transition: color 0.3s ease-in-out;
 }
 
 .project-container {
-	padding: 20px; /* Adjusted padding for better mobile appearance */
-	display: flex; /* Flex layout for internal content */
-	flex-direction: column; /* Stack items vertically */
-	align-items: flex-start; /* Align items to the left */
+	padding: 30px;
 }
 
 .project-logo {
-	width: 50px; /* Increased logo size for better visibility */
-	margin-bottom: 10px; /* Space between logo and title */
+	width: 30px;
 }
 
 .project-logo img {
-	width: 100%; /* Ensure logo scales with container */
-	height: auto; /* Maintain aspect ratio */
+	width: 100%;
 }
 
 .project-title {
 	font-family: var(--secondary-font);
 	color: var(--primary-color);
-	font-size: 18px; /* Increased title size for better readability */
-	padding-top: 5px; /* Reduced padding */
-	margin-bottom: 0.5em; /* Reduced bottom margin */
+	font-size: 16px;
+	padding-top: 15px;
+	margin-bottom: 1em;
 	font-weight: 700;
 }
 
 .project-description {
 	color: var(--secondary-color);
-	font-size: 14px; /* Increased description font size */
-	line-height: 1.4; /* Improved line height for readability */
-	margin-bottom: 10px; /* Space before the link */
 }
 
 .project-link {
-	display: flex; /* Flex layout for link */
-	align-items: center; /* Center the icon and text */
+	display: flex;
+	align-items: center;
 	color: var(--secondary-color);
-	font-size: 14px; /* Slightly larger font size for readability */
-	padding-top: 10px; /* Reduced padding for better spacing */
+	font-size: 12px;
+	padding-top: 20px;
 }
 
 .project-link-icon {
 	padding-left: 5px;
-	font-size: 13px; /* Icon size */
+	font-size: 13px;
 }
 
 .project-link-text {
-	padding-left: 10px; /* Reduced padding for better alignment */
+	padding-left: 20px;
 	font-weight: 700;
 }
 
-/* Responsive Styles */
 @media (max-width: 600px) {
 	.project {
-		height: auto; /* Allow auto height for flexibility */
-		width: 90%; /* Full width on mobile */
-	}
-
-	.project-container {
-		padding: 15px; /* Reduced padding for smaller screens */
-	}
-
-	.project-title {
-		font-size: 16px; /* Title size adjustment for mobile */
-	}
-
-	.project-description {
-		font-size: 12px; /* Smaller description size for mobile */
-	}
-
-	.project-link {
-		font-size: 12px; /* Smaller link text for mobile */
+		height: 300px;
 	}
 }
