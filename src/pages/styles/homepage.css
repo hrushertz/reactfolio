@@ -1,150 +1,182 @@
 @import "../../data/styles.css";
 
+* {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .homepage-logo-container {
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	padding-top: 130px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 130px;
+    width: 100%; /* Ensure full width */
 }
 
 .homepage-container {
-	padding-top: 25px;
+    padding-top: 25px;
+    width: 100%; /* Ensure full width */
 }
 
 .homepage-first-area {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap */
 }
 
 .homepage-first-area-left-side {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Full width */
 }
 
 .homepage-title {
-	width: 85% !important;
+    width: 85% !important; /* Adjust if needed */
 }
 
 .homepage-subtitle {
-	width: 85% !important;
+    width: 85% !important; /* Adjust if needed */
 }
 
 .homepage-first-area-right-side {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure full width */
 }
 
 .homepage-image-container {
-	width: 370px;
-	height: 370px;
+    max-width: 100%; /* Ensure image container does not exceed viewport */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .homepage-image-wrapper {
-	overflow: hidden;
-	border-radius: 10%;
-	transform: rotate(3deg);
+    overflow: hidden;
+    border-radius: 10%;
+    transform: rotate(3deg);
+    width: 100%; /* Full width for mobile */
 }
 
 .homepage-image-wrapper img {
-	width: 100%;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
 }
 
 .homepage-socials {
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	padding-top: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 30px;
+    flex-wrap: wrap; /* Allow social icons to wrap */
 }
 
 .homepage-social-icon {
-	padding-right: 20px;
-	font-size: 25px;
-	transition: color 0.2s ease-in-out;
-	color: var(--secondary-color);
+    padding-right: 20px;
+    font-size: 25px;
+    transition: color 0.2s ease-in-out;
+    color: var(--secondary-color);
 }
 
 .homepage-social-icon:hover {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .homepage-after-title {
-	display: flex;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
 }
 
-.homepage-projects {
-	flex-basis: 300px;
-	padding-top: 40px;
-}
-
-.homepage-articles {
-	flex-basis: 900px;
-	padding-top: 30px;
-	margin-left: -30px;
-}
-
-.homepage-article {
-	padding-bottom: 5px;
-}
-
+.homepage-projects,
+.homepage-articles,
 .homepage-works {
-	flex-basis: 600px;
-	padding-top: 30px;
+    flex-basis: auto; /* Allow flexibility */
+    width: 100%; /* Full width for mobile */
+    padding-top: 20px; /* Adjust spacing */
+    margin: 0; /* Remove negative margins */
 }
 
+/* Media Queries for Responsive Design */
 @media (max-width: 1024px) {
-	.homepage-first-area {
-		flex-direction: column;
-	}
+    .homepage-first-area {
+        flex-direction: column; /* Stack items vertically */
+    }
 
-	.homepage-first-area-left-side {
-		display: flex;
-		flex-direction: column; /* Changed: set direction to column */
-		align-items: flex-start;
-		width: 100%;
-		order: 2;
-	}
+    .homepage-first-area-left-side {
+        width: 100%; /* Full width */
+        order: 2;
+    }
 
-	.homepage-title {
-		width: 100% !important;
-		margin-top: 20px;
-		order: 2;
-	}
+    .homepage-title,
+    .homepage-subtitle {
+        width: 100% !important; /* Full width */
+        margin-top: 20px;
+    }
 
-	.homepage-subtitle {
-		width: 100% !important;
-		margin-top: 10px;
-		order: 3;
-	}
+    .homepage-first-area-right-side {
+        width: 100%; /* Full width */
+        order: 1;
+    }
 
-	.homepage-first-area-right-side {
-		width: 100%;
-		order: 1;
-	}
+    .homepage-image-container {
+        width: 100%; /* Full width on smaller screens */
+        padding-top: 20px; /* Reduced padding */
+        padding-bottom: 20px; /* Reduced padding */
+        order: 1;
+    }
 
-	.homepage-image-container {
-		padding-top: 50px;
-		padding-bottom: 50px;
-		margin-left: 10px;
-		order: 1;
-	}
+    .homepage-after-title {
+        flex-direction: column; /* Stack items */
+        width: 100%; /* Full width */
+    }
 
-	.homepage-after-title {
-		flex-direction: column;
-	}
+    .homepage-projects,
+    .homepage-articles,
+    .homepage-works {
+        flex-basis: auto; /* Auto for flexibility */
+        width: 100%; /* Full width for mobile */
+        margin: 0; /* Reset margins */
+    }
+}
 
-	.homepage-projects {
-		flex-basis: auto;
-	}
+@media (max-width: 768px) {
+    .homepage-logo-container {
+        padding-top: 80px; /* Adjust logo padding */
+        justify-content: center; /* Center logo */
+    }
 
-	.homepage-articles {
-		flex-basis: auto;
-	}
+    .homepage-title {
+        font-size: 1.8rem; /* Smaller font size */
+    }
 
-	.homepage-works {
-		flex-basis: auto;
-		margin-left: -25px;
-		margin-right: -25px;
-	}
+    .homepage-subtitle {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+
+    .homepage-socials {
+        justify-content: center; /* Center social icons */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .homepage-social-icon {
+        font-size: 20px; /* Smaller icons */
+        padding-right: 15px; /* Adjust padding */
+    }
+
+    .homepage-image-container {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height for responsiveness */
+    }
+
+    .homepage-image-wrapper {
+        transform: rotate(0deg); /* Reset rotation for mobile */
+    }
+
+    .homepage-after-title {
+        flex-direction: column; /* Stack items */
+        width: 100%; /* Full width */
+    }
 }

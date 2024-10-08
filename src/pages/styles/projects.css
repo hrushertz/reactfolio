@@ -17,17 +17,39 @@
 .projects-container {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	height: auto; /* Adjust height to auto to allow for dynamic content */
 	margin: 0;
-	padding-top: 120px;
+	padding-top: 120px; /* Top padding for larger screens */
+}
+
+@media (max-width: 1024px) {
+	.projects-container {
+		padding-top: 80px; /* Reduced padding for tablet screens */
+	}
 }
 
 @media (max-width: 600px) {
 	.projects-container {
-		padding-top: 60px;
+		padding-top: 60px; /* Further reduced padding for mobile */
+		padding-left: 10px; /* Add padding on the left */
+		padding-right: 10px; /* Add padding on the right */
 	}
 
 	.projects-project {
-		width: calc(100% / 2);
+		width: calc(100% / 2 - 20px); /* Two projects per row with spacing */
+		margin: 10px; /* Add margin between project items */
+	}
+
+	.projects-title {
+		font-size: 20px; /* Adjust font size for mobile */
+		text-align: center; /* Center title for better readability */
+	}
+
+	.projects-subtitle {
+		font-size: 14px; /* Adjust font size for mobile */
+		text-align: center; /* Center subtitle for better readability */
+		padding: 0 10px; /* Add padding for spacing */
 	}
 }
+
+/* Optionally, you can add more styles for .projects-project if needed */

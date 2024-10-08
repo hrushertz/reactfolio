@@ -2,20 +2,30 @@
 
 .article {
 	display: flex;
+	flex-wrap: wrap; /* Allow items to wrap for better responsiveness */
+	padding: 15px; /* Add some padding for spacing */
+	border: 1px solid #ddd; /* Optional: Add a border for separation */
+	border-radius: 8px; /* Optional: Add border radius */
+	margin-bottom: 15px; /* Space between articles */
+	background: #fff; /* Set background color */
+	transition: box-shadow 0.2s ease; /* Add transition for hover effect */
 }
 
 .article a {
 	text-decoration: none;
+	width: 100%; /* Make link fill the container */
 }
 
 .article-left-side {
 	min-width: 20%;
 	max-width: 20%;
+	flex-shrink: 0; /* Prevent shrinking */
+	text-align: center; /* Center align date text */
 }
 
 .article-right-side {
 	flex-basis: 80%;
-	min-width: 700px;
+	min-width: 700px; /* Default min width for larger screens */
 	mix-blend-mode: normal;
 	border-radius: 20px;
 	opacity: 0.8;
@@ -57,13 +67,31 @@
 
 @media (max-width: 1024px) {
 	.article-left-side {
-		min-width: 10%;
-		max-width: 10%;
+		min-width: 15%; /* Adjust width for medium screens */
+		max-width: 15%;
 	}
 
 	.article-right-side {
-		flex-basis: 90%;
-		min-width: 85%;
-		max-width: 85%;
+		flex-basis: 85%; /* Use more space on medium screens */
+		min-width: 85%; /* Minimum width for right side */
+		max-width: 85%; /* Maximum width for right side */
+	}
+}
+
+@media (max-width: 600px) {
+	.article {
+		flex-direction: column; /* Stack items vertically */
+	}
+
+	.article-left-side {
+		min-width: 100%; /* Full width on small screens */
+		max-width: 100%; /* Full width on small screens */
+		padding-bottom: 10px; /* Space below date */
+	}
+
+	.article-right-side {
+		min-width: 100%; /* Full width on small screens */
+		max-width: 100%; /* Full width on small screens */
+		padding: 20px; /* Less padding for mobile */
 	}
 }

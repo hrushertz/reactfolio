@@ -13,10 +13,24 @@
 	box-sizing: border-box;
 	padding: 10px;
 	overflow: hidden;
+	transition: transform 0.3s ease; /* Smooth scale effect on hover */
+	border-radius: 10px; /* Slightly rounded corners */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.all-projects-project:hover {
+	transform: scale(1.02); /* Scale up on hover for feedback */
+}
+
+@media (max-width: 1024px) {
+	.all-projects-project {
+		width: calc(100% / 2); /* Two cards in a row for medium devices */
+	}
 }
 
 @media (max-width: 600px) {
 	.all-projects-project {
-		width: calc(100% / 2);
+		width: 100%; /* Full width for mobile devices */
+		padding: 15px; /* Adjust padding for mobile */
 	}
 }

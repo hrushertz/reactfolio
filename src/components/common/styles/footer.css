@@ -2,62 +2,79 @@
 
 .footer {
 	display: flex;
-	padding-top: 25px;
+	padding: 25px 0; /* Top and bottom padding */
 	margin-top: 50px;
-	padding-bottom: 25px;
-	align-items: center;
-}
-
-.footer-links,
-.footer-credits {
-	flex-basis: 50%;
+	align-items: center; /* Center items vertically */
+	justify-content: space-between; /* Space between links and credits */
+	flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .footer-links {
-	margin-left: -40px;
+	flex-basis: 50%;
+	margin-left: -40px; /* Consider removing this if it causes layout issues */
 }
 
 .footer-nav-link-list {
 	display: flex;
 	list-style: none;
-	justify-content: space-between;
+	justify-content: space-between; /* Distribute links evenly */
 	align-items: center;
+	width: 100%; /* Ensure the list takes full width */
 }
 
 .footer-nav-link-item {
 	font-weight: bold;
-	font-size: 80%;
+	font-size: 80%; /* Adjusted for mobile compatibility */
+	margin: 0 10px; /* Margin between items */
 }
 
 .footer-nav-link-list a {
 	text-decoration: none;
-	color: var(--secondary-color);
+	color: var(--secondary-color); /* Link color */
+	transition: color 0.2s ease-in-out; /* Smooth transition for hover */
 }
 
 .footer-nav-link-list a:hover {
-	color: var(--link-color);
+	color: var(--link-color); /* Hover color */
+}
+
+.footer-credits {
+	flex-basis: 50%;
+	text-align: right; /* Align credits text to the right */
 }
 
 .footer-credits-text {
-	justify-content: flex-end;
 	color: var(--tertiary-color);
 	font-size: 14px;
-	text-align: right;
 }
 
+/* Mobile Styles */
 @media (max-width: 600px) {
 	.footer {
-		flex-direction: column;
-		height: 85px;
+		flex-direction: column; /* Stack elements vertically */
+		align-items: center; /* Center items horizontally */
 	}
 
 	.footer-links {
-		display: flex;
-		width: 100%;
-		justify-content: center;
+		width: 100%; /* Full width on mobile */
+		justify-content: center; /* Center links */
+		margin-left: 0; /* Reset margin for mobile */
+		margin-bottom: 10px; /* Space below links */
 	}
 
 	.footer-nav-link-list {
-		width: 100%;
+		flex-direction: column; /* Stack links vertically on mobile */
+		align-items: center; /* Center items */
+		width: 100%; /* Ensure full width */
+	}
+
+	.footer-nav-link-item {
+		margin: 5px 0; /* Space between vertical links */
+		font-size: 100%; /* Adjust font size for better readability */
+		text-align: center; /* Center text for links */
+	}
+
+	.footer-credits {
+		text-align: center; /* Center credits text on mobile */
 	}
 }
