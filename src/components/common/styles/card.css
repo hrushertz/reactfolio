@@ -1,13 +1,18 @@
 @import "../../../data/styles.css";
 
 .card {
-	mix-blend-mode: normal;
 	border-radius: 20px;
+	opacity: 0.8;
+	height: 100%;
+	mix-blend-mode: normal;
 	outline: 2px solid #f4f4f5;
+	padding: 20px;
+	margin: 10px;
 }
 
 .card-container {
-	padding: 30px;
+	padding-top: 40px;
+	font-size: 15px;
 	padding-bottom: 5px;
 }
 
@@ -31,4 +36,19 @@
 .card-body {
 	padding-top: 40px;
 	font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 15px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 10px;
+        margin: 2px;
+        font-size: 0.9em;
+    }
 }

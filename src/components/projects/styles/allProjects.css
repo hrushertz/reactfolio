@@ -15,8 +15,26 @@
 	overflow: hidden;
 }
 
-@media (max-width: 600px) {
-	.all-projects-project {
+.all-projects {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .all-projects {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+    .all-projects-project {
 		width: calc(100% / 2);
+	}
+}
+
+@media (max-width: 480px) {
+    .all-projects {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .all-projects-project {
+		width: 100%;
 	}
 }

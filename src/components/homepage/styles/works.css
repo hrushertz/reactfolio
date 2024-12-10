@@ -4,10 +4,48 @@
 	margin-bottom: 10px;
 }
 
+.works {
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    .works {
+        padding: 18px;
+        font-size: 1.05em;
+    }
+}
+
+@media (max-width: 992px) {
+    .works {
+        padding: 16px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .works {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .works {
+        padding: 12px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .works {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
 .work {
 	display: flex;
 	padding-bottom: 40px;
-	width: 400px;
 }
 
 .work-image {

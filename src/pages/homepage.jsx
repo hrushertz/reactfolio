@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
+import { faTwitter, faGithub, faStackOverflow, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faTwitter,
-	faGithub,
-	faStackOverflow,
-	faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
 
-import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
 import Article from "../components/homepage/article";
@@ -84,7 +78,7 @@ const Homepage = () => {
 				<div className="content-wrapper">
 					<div className="homepage-logo-container">
 						<div style={logoStyle}>
-							<Logo width={logoSize} link={false} />
+							{/* Removed Logo component usage */}
 						</div>
 					</div>
 

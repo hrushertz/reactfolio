@@ -1,6 +1,24 @@
 .logo {
 	border-radius: 50%;
 	display: block;
-	margin: 0;
+	margin: 0; /* Remove margin to allow overlap */
 	padding: 0;
+	width: 60px; /* Reduced size of the logo */
+	height: auto;
+	position: fixed; /* Keep the logo fixed at the top */
+	z-index: 1002; /* Ensure logo is above other elements */
+	top: 10px; /* Adjust top position as needed */
+	transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+@media (max-width: 768px) {
+	.logo {
+		width: 50px; /* Adjust for smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+	.logo {
+		width: 40px; /* Adjust for mobile screens */
+	}
 }

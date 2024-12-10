@@ -5,6 +5,7 @@
 	border-radius: 20px;
 	opacity: 0.8;
 	height: 100%;
+	padding: 20px;
 }
 
 .project a {
@@ -65,8 +66,16 @@
 	font-weight: 700;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	.project {
-		height: 300px;
+		padding: 15px;
+		font-size: 1.1em;
+	}
+}
+
+@media (max-width: 480px) {
+	.project {
+		padding: 10px;
+		font-size: 0.9em;
 	}
 }
